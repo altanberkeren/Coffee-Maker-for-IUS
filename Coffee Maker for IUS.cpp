@@ -12,7 +12,7 @@
 #include "operationMode.h"
 #include "settingMode.h"
 #include "QualityOfLife.h"
-#include "log.h"
+#include "Log.h"
 
 using std::cin;
 using std::cout;
