@@ -13,7 +13,7 @@ void logCoffee(int coffeeCups[], int coinsAmmount[],std::string coffeeNames[]){
 
     time_t rawDate = time(nullptr);// taking the time as second
 
-    std::string date = ctime(time);
+    std::string date = ctime(&rawDate);
 
 
     //std::cout<< date <<"\n";
