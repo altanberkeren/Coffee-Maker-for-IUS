@@ -25,7 +25,7 @@ void logCoffee(int coffeeCups[], int coinsAmmount[],std::string coffeeNames[]){
 
     dbW<<"Coffee Left:\n";
     for(int i=0; i<5; i++)
-        dbW<<coffeeNames[i]<<coffeeCups[i]<<'\n';
+        dbW<<coffeeNames[i]<<" -> "<<coffeeCups[i]<<'\n';
     
 
     dbW<<"\nCoin amounts:\n";
