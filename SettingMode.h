@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "qualityOfLife.h"
+#include "QualityOfLife.h"
 
 // These are just there to make life easier.
 using std::cin;

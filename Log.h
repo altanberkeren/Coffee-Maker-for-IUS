@@ -9,7 +9,7 @@
 #include <ctime>
 
 
-void logCoffee(int coffeeCups[], int coinsAmmount[]){
+void logCoffee(int coffeeCups[], int coinsAmmount[],std::string coffeeNames[]){
 
     time_t rawDate = time(nullptr);// taking the time as second
 
@@ -21,37 +21,12 @@ void logCoffee(int coffeeCups[], int coinsAmmount[]){
 
     std::ofstream dbW("dataBase.txt", std::ios_base::out);
 
-    
+    dbW<<date<<"\n";
 
     dbW<<"Coffee Left:\n";
-    for(int i=0; i<5; i++){
-        switch (i){
-        
-        case 0:
-                dbW<<"Latte: "<<coffeeCups[i]<<'\n';
-                //ctotal + = 1 * coffeeCups[i];
-            break;
-
-        case 1:
-                dbW<<"Capu: "<<coffeeCups[i]<<'\n';
-            break;
-        
-        case 2:
-                dbW<<"Kafa: "<<coffeeCups[i]<<'\n';
-            break;
-        
-        case 3:
-                dbW<<"Kahve: "<<coffeeCups[i]<<'\n';
-            break;
-
-        case 4:
-                dbW<<"Kola: "<<coffeeCups[i]<<'\n';
-            break;
-        
-        default:
-            break;
-        }
-    }
+    for(int i=0; i<5; i++)
+        dbW<<coffeeNames[i]<<coffeeCups[i]<<'\n';
+    
 
     dbW<<"\nCoin amounts:\n";
 

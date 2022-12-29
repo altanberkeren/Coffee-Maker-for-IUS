@@ -11,7 +11,7 @@
 
 #include "operationMode.h"
 #include "settingMode.h"
-#include "qualityOfLife.h"
+#include "QualityOfLife.h"
 #include "log.h"
 
 using std::cin;
@@ -86,7 +86,7 @@ int main()
     //END OF THE DAY EVALUATION
     cout << "END OF THE DAY EVALUATION: " << endl;
     cout << "Creating file"; pause();
-    logCoffee(coffeeCups, coinsAmount);
+    logCoffee(coffeeCups, coinsAmount, coffeeNames);
     cout << "Look for it in the text file attached ;)" << endl;
     system("notepad.exe database.txt"); // ACTUALLY OPENS UP THE FILE XD!!!!!!!!@!@q!!@!@!!!!!!!retwe%yre^%#qrtr
 
