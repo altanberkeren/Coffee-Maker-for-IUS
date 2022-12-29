@@ -86,7 +86,8 @@ int main()
     //END OF THE DAY EVALUATION
     cout << "END OF THE DAY EVALUATION: " << endl;
     cout << "Creating file"; pause();
-    logCoffee(coffeeCups, coinsAmount, coffeeNames);
+    
+    logCoffee(coffeeNames, coffeePrices, coinsValue, coffeeCups, coinsAmount);
     cout << "Look for it in the text file attached ;)" << endl;
     system("notepad.exe database.txt"); // ACTUALLY OPENS UP THE FILE XD!!!!!!!!@!@q!!@!@!!!!!!!retwe%yre^%#qrtr
 

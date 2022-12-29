@@ -1,7 +1,29 @@
-Thu Dec 29 17:07:12 2022
+Thu Dec 29 22:10:59 2022
 
-Coffee Left:
-Espresso -> 5
+
+Coffee types:
+Espresso
+Cappucino
+Hot Chocolate
+Melange
+Americano
+
+Coffee prices:
+Espresso -> 2 KM.
+Cappucino -> 2 KM.
+Hot Chocolate -> 3.5 KM.
+Melange -> 3 KM.
+Americano -> 1.5 KM.
+
+Valid Coin Types:
+0.05
+0.1
+0.2
+0.5
+1
+
+Number of each coffee:
+Espresso -> 3
 Cappucino -> 3
 Hot Chocolate -> 3
 Melange -> 3
@@ -16,7 +38,7 @@ Coin amounts:
 2: 3
 5: 3
 
-Total: 50.55 KM.
+Total: 26.55 KM.
 
-End of the File
+End of the Log file
 

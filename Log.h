@@ -9,7 +9,7 @@
 #include <ctime>
 
 
-void logCoffee(std::string coffeeNames[], int coffeePrices[], int coinsValue[], int coffeeCups[], int coinsAmmount[]){
+void logCoffee(std::string coffeeNames[], double coffeePrices[], const long double coinsValue[], int coffeeCups[], int coinsAmount[]){
 
     time_t rawDate = time(nullptr);// taking the time as second
 
@@ -25,9 +25,9 @@ void logCoffee(std::string coffeeNames[], int coffeePrices[], int coinsValue[], 
 
     dbW<<"\nCoffee prices:\n";
     for(int i=0; i<5; i++)
-        dbW<<coffeePrices[i]<<"\n";
+        dbW<<coffeeNames[i]<<" -> "<<coffeePrices[i]<<" KM."<<"\n";
     
-    dbW<<"Valid Coin Types:\n";
+    dbW<<"\nValid Coin Types:\n";
     for(int i=0; i<5; i++)
         dbW<<coinsValue[i]<<"\n";
 
@@ -42,8 +42,8 @@ void logCoffee(std::string coffeeNames[], int coffeePrices[], int coinsValue[], 
     double total = 0;
 
     for(int i=0; i<7; i++){
-        dbW<<coinsValue[i]<<": "<<coinsAmmount[i]<<'\n';
-        total += coinsValue[i] * coinsAmmount[i];
+        dbW<<coinsValue[i]<<": "<<coinsAmount[i]<<'\n';
+        total += coinsValue[i] * coinsAmount[i];
     }
 
     dbW<<"\nTotal: "<<total<<" KM.\n\nEnd of the Log file\n\n";
