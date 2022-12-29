@@ -9,23 +9,32 @@
 #include <ctime>
 
 
-void logCoffee(int coffeeCups[], int coinsAmmount[],std::string coffeeNames[]){
+void logCoffee(std::string coffeeNames[], int coffeePrices[], int coinsValue[], int coffeeCups[], int coinsAmmount[]){
 
     time_t rawDate = time(nullptr);// taking the time as second
 
     std::string date = ctime(&rawDate);
 
-
-    //std::cout<< date <<"\n";
-
-
     std::ofstream dbW("dataBase.txt", std::ios_base::out);
 
-    dbW<<date<<"\n";
+    dbW<<date<<"\n\n";
 
-    dbW<<"Coffee Left:\n";
+    dbW<<"Coffee types:\n";
+    for(int i=0; i<5; i++)
+        dbW<<coffeeNames[i]<<"\n";
+
+    dbW<<"\nCoffee prices:\n";
+    for(int i=0; i<5; i++)
+        dbW<<coffeePrices[i]<<"\n";
+    
+    dbW<<"Valid Coin Types:\n";
+    for(int i=0; i<5; i++)
+        dbW<<coinsValue[i]<<"\n";
+
+    dbW<<"\nNumber of each coffee:\n";
     for(int i=0; i<5; i++)
         dbW<<coffeeNames[i]<<" -> "<<coffeeCups[i]<<'\n';
+
     
 
     dbW<<"\nCoin amounts:\n";
@@ -33,47 +42,9 @@ void logCoffee(int coffeeCups[], int coinsAmmount[],std::string coffeeNames[]){
     double total = 0;
 
     for(int i=0; i<7; i++){
-        switch (i){
-        
-        case 0:
-                dbW<<"0.05: "<<coinsAmmount[i]<<'\n';
-                total += 0.05*coinsAmmount[i];
-            break;
-
-        case 1:
-                dbW<<"0.1: "<<coinsAmmount[i]<<'\n';
-                total += 0.1*coinsAmmount[i];
-            break;
-        
-        case 2:
-                dbW<<"0.2: "<<coinsAmmount[i]<<'\n';
-                total += 0.2*coinsAmmount[i];
-            break;
-        
-        case 3:
-                dbW<<"0.5: "<<coinsAmmount[i]<<'\n';
-                total += 0.5*coinsAmmount[i];
-            break;
-
-        case 4:
-                dbW<<"1: "<<coinsAmmount[i]<<'\n';
-                total += 1*coinsAmmount[i];
-            break;
-        case 5:
-                dbW<<"2: "<<coinsAmmount[i]<<'\n';
-                total += 10*coinsAmmount[i];
-            break;
-        case 6:
-                dbW<<"5: "<<coinsAmmount[i]<<'\n';
-                total += 5*coinsAmmount[i];
-            break;
-        default:
-            break;
-        }
+        dbW<<coinsValue[i]<<": "<<coinsAmmount[i]<<'\n';
+        total += coinsValue[i] * coinsAmmount[i];
     }
 
-
-    dbW<<"\nTotal: "<<total<<" KM.\n\nEnd of the File\n\n";
-
-
+    dbW<<"\nTotal: "<<total<<" KM.\n\nEnd of the Log file\n\n";
 }
